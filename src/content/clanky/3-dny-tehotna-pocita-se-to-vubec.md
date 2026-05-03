@@ -1,5 +1,5 @@
 ---
-kategorie: moje-pribehy
+kategorie: pribehy-jinych
 title: '3 dny těhotná. Počítá se to vůbec'
 date: 2022-03-09
 description: 'V poslední době se ke mně dostalo několik příběhů. Ve své podstatě byly každý jiný (dlouhé snažení, IVF, náhoda, …), ale jedno měly společné. Jednalo se…'

@@ -1,6 +1,6 @@
 ---
 kategorie: moje-pribehy
-title: '1. díl Deník holky s PCOS Cesta k adopci'
+title: '2. díl Deník holky s PCOS Cesta k adopci'
 date: 2022-01-30
 description: 'Odebrali mi 30 oocytů, skončila jsem po OPU v nemocnici s hyperstimulačním syndromem. A to byl teprve začátek dlouhé cesty.'
 ---
