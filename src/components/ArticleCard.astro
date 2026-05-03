@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  date: Date;
+  description?: string;
+  pinned?: boolean;
+}
+
+const { title, slug, date, description, pinned = false } = Astro.props;
+
+const formatted = date.toLocaleDateString('cs-CZ', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+<li class={`article-card${pinned ? ' article-card--pinned' : ''}`}>
+  {pinned && <p class="article-card__label">Úvodní článek</p>}
+  <h2 class="article-card__title">
+    <a href={`/clanky/${slug}`}>{title}</a>
+  </h2>
+  <p class="article-card__meta">{formatted}</p>
+  {description && <p class="article-card__excerpt">{description}</p>}
+</li>

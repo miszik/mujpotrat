@@ -1,0 +1,28 @@
+---
+---
+<div class="trigger-warning" id="trigger-warning" role="alert">
+  <p>
+    <strong>Upozornění:</strong> Tato stránka obsahuje osobní příběhy o potratech a ztrátě těhotenství.
+    Pokud jsi v křehkém období, dej si prostor.
+  </p>
+  <button class="trigger-warning__close" aria-label="Zavřít upozornění" onclick="closeTW()">✕</button>
+</div>
+
+<script>
+  function closeTW() {
+    const el = document.getElementById('trigger-warning');
+    if (el) {
+      el.style.display = 'none';
+      sessionStorage.setItem('tw-closed', '1');
+    }
+  }
+
+  // Hide immediately if already dismissed this session
+  if (sessionStorage.getItem('tw-closed')) {
+    const el = document.getElementById('trigger-warning');
+    if (el) el.style.display = 'none';
+  }
+
+  // Expose to onclick
+  (window as any).closeTW = closeTW;
+</script>

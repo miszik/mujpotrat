@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TriggerWarning from '../components/TriggerWarning.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const allArticles = await getCollection('clanky');
+
+// Pinned first, then by date descending
+const articles = allArticles.sort((a, b) => {
+  if (a.data.pinned && !b.data.pinned) return -1;
+  if (!a.data.pinned && b.data.pinned) return 1;
+  return b.data.date.getTime() - a.data.date.getTime();
+});
+---
+<BaseLayout title="Můj potrat">
+  <TriggerWarning />
+
+  <div class="container prose">
+    <div class="site-intro">
+      <p>
+        Blog Míši. O třech potratech, o tichu po nich, o hledání cesty dál.
+        Psaný proto, aby se žádná žena v tom nemusela cítit sama.
+      </p>
+    </div>
+
+    <img
+      src="/images/deti-bez-obliceje.jpg"
+      alt="Dvě děti na procházce"
+      class="hero-image"
+      width="900"
+      height="400"
+      loading="eager"
+    />
+
+    <ul class="article-list" role="list">
+      {articles.map(article => (
+        <ArticleCard
+          title={article.data.title}
+          slug={article.id}
+          date={article.data.date}
+          description={article.data.description}
+          pinned={article.data.pinned}
+        />
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

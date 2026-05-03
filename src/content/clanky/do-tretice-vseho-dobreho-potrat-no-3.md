@@ -1,0 +1,14 @@
+---
+title: 'Do třetice všeho dobrého ... (potrat No.3)'
+date: 2021-12-09
+description: 'Tento příběh jsem již v pár článcích nakousla, nicméně mám potřebu i pro něj vyhradit jeden článek. Bylo září a já se učila na odsunuté státnice. Očekáv…'
+---
+Tento příběh jsem již v pár článcích nakousla, nicméně mám potřebu i pro něj vyhradit jeden článek. Bylo září a já se učila na odsunuté státnice. Očekávala jsem přísného chlapíka v komisi a tak jsem nechtěla nic nechat náhodě. Už by teoreticky mohl být čas na další zkoušení, ale s manželem jsme se dohodli, že vše necháme až budu mít PO.
+
+Asi po dvou týdnech učení mi lehce otrnulo. Otázky jsem měla dobře připravené a učící plán kupodivu také celkem vycházel. Najednou jsem začala mít silný pocit, že když do toho teď půjdem, vyjde to. Možná intuice, možná ovulace, kdo ví :D. Manžel vyjádřil jisté obavy ohledně mých státnic, ale vysvětlila jsem mu, že eventuelní těhotenství se stejně dozvím až po státnicích, takže titul to rozhodně neohrozí. Nakonec souhlasil a musím říct, že se mi pak další dny učilo hned lépe :D.
+
+Státnice proběhly úspěšně. Manžel si zrovna objednával nějaké vitamíny z lékárny. Přidala jsem se k němu a přihodila jsem do košíku kyselinu listovou, která mi docházela, a těhotenské testy. Žel si manžel nechal poslat balíček do práce a následně onemocněl. Musela jsem čekat další týden, ale byla jsem si na vysoká procenta jistá, že to vyšlo. MS meškala podle plánu a já byla šťastná.
+
+Mám titul, jsem těhotná, je říjen, za chvíli jsou tu Vánoce a tohle bude ten nejkrásnější dárek. Test jsem si udělala více méně aby se neřeklo. Vše bylo potvrzeno a já se další dva týdny těšila na první fotku z UTZ. Konečně nadešel očekávaný den. Trochu jsem se bála, protože kontrola zrovna vycházela i na cytologii, ale to že by bylo něco v nepořádku mě opět ani nenapadlo. Doktor zavedl sondu. Viděla jsem bublinku, ale to bylo všechno! Měla jsem být skoro v sedmém týdnu, takhle to přece nemá vypadat! Doktor začal mluvit něco o pravděpodobnostech pomalejšího vývoje. Jasně, ještě je nějaká šance. Změřili mi HCG a za další dva dny znovu. “HCG roste” začala jsem se radovat “to ale znamená, že by embryo mělo být už dávno vidět” aha… Ještě jeden ultrazvuk a bylo potvrzeno :( zamlklé těhotenství. I když jsem se na tuhle možnost pár dní připravovala, pomohlo to jen do té míry, že se smutek spustil až doma. Ještě ten den jsem šla na předoperační kontrolu. Kyretáž mohla být zítra - souhlasila jsem. Chci to mít už za sebou!
+
+Teď jsem po kyretáži cca měsíc a pořád tomu nemůžu uvěřit! Opravdu se to děje mně? Jsem schopná vůbec miminko donosit? Od ledna začnou kolotoče s vyšetřováním. Mám strach. Mám strach, že se najde něco špatného. Zároveň mám strach, že se nic nenajde a my dál nebudeme vědět proč. Tak moc bych chtěla vědět proč!
