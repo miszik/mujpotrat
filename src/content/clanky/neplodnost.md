@@ -1,17 +1,9 @@
 ---
-kategorie: telo-a-pece
-title: 'Neplodnost'
+kategorie: moje-pribehy
+title: '1. díl Deník holky s PCOS Cesta k adopci'
 date: 2022-01-30
-description: 'Náš příběh začal krátce po svatbě, kdy jsme se rozhodli, že jsme oba připraveni mít spolu miminko. A naše cesta ještě není u konce.'
+description: 'Odebrali mi 30 oocytů, skončila jsem po OPU v nemocnici s hyperstimulačním syndromem. A to byl teprve začátek dlouhé cesty.'
 ---
-Náš příběh začal krátce po svatbě, kdy jsme se rozhodli, že jsme oba připraveni mít spolu miminko. A naše cesta ještě není u konce.
-
- V té době jsem brala antikoncepci, tak jsem si řekla, že ji vysadím a uvidím. Jenže menstruace nepřišla, jak jsem si myslela. První, co mě napadlo bylo, že jsem těhotná. Únor 2017, to byla doba, kdy jsem poprvé v ruce držela negativní test. Když ani po dalších 2 měsících se cyklus neobnovil, zašla jsem k doktorce. A tam padla poprvé věta: „Máte PCOS. Nikdy nebudete mít děti.” ..Děkuji pěkně! A tím se roztočil náš kolotoč.
-
- Začala jsem pátrat na internetu, co je to vlastně PCOS a zjistila, že mohu otěhotnět a že některé ženy otěhotněly i přirozeně. Změnila jsem tedy gynekoložku. Nechala jsem si udělat hormonální profil, který diagnózu potvrdil a manžel spermiogram(ten byl v pořádku).
-
- Po třech měsících s Clostilbegytem a ani jednou ovulací, jsme šli do IVF centra. Vybrali jsme si Podolí, které nám doporučila i doktorka. Zde proběhla snaha o ovulaci, ale bohužel se tak nestalo ani při nízkých dávkách hormonů, které se dávají už při IVF stimulacích. Dohodli jsme se, že podstoupíme naše 1.IVF. Naivně jsem si myslela, že bude jen jedno a poslední.
-
 Odebrali mi 30 oocytů, skončila jsem po OPU v nemocnici s hyperstimulačním syndromem, psychicky jsem byla vyčerpaná. Dala jsem se dohromady a pak jsme podstoupili náš 1. KET, kde až po zákroku jsem zjistila, že jsem měla brát utrogestan. Snad to nebude vadit, a i tak se zadaří, říkala jsem si. Jenže 14 dní po KET jsem držela negativní test.
 
 2. KET byl s dvěma embryi a s negativním výsledkem. Měli jsme poslední dvě embrya. Ale jelikož mi nevyhovoval přístup lékařů a sester, rozhodli jsme se je převézt do Gennetu. Ale před tím, než jsme tak udělali, jsem tak nějak cítila, že potřebuji pauzu.
@@ -36,7 +28,7 @@ Nedalo mi to a nenechala jsem se odbýt větou, že vše je v pořádku, že se 
 
 Zároveň jsem zjistila, že i když má manžel spermiogram v pořádku, může mít špatnou DNA fragmentaci. Na klinice nám vyšetření nechtěli udělat, že je to zbytečné. Tak jsme si ho nechali udělat sami jako samoplátci. A světe div se výsledek byl 40 %, to je množství, kdy už se doporučuje dárce spermií.
 
-Na klinice jsme se dohodli, že zbylá 4 embrya necháme ještě vyšetřit, kdyby bylo nějaké zdravé, nechali bychom ho zavést. Genetika však dopadla mizerně. Dvě embrya se po rozmrazení špatně vyvíjela a zbylá dvě jsou s genetickou zátěží, jedno neslučitelné se životem, druhé sice mělo vadu, která by byla slučitelná se životem, a i nějaké to procento, že by se nakonec narodilo zdravé, tam bylo. Ale na konzultaci nám nedoporučili ho i přesto zavádět, pokud na tom nebudeme lpět. Nechtěla jsem jít do takového rizika, a tak jsme transfer odmítli.
+Na klinice jsme se dohodli, že zbylá 4 embrya necháme ještě vyšetřit, kdyby bylo nějaké zdravé, nechali bychom ho zavést. Genetika však dopadla mizerně. Dvě embrya se po rozmrazení špatně vyvíjela a zbylá dvě jsou s genetickou zátěží, jedno neslučitelné se životem, druhé sice mělo vadu, která by byla slačitelná se životem, a i nějaké to procento, že by se nakonec narodilo zdravé, tam bylo. Ale na konzultaci nám nedoporučili ho i přesto zavádět, pokud na tom nebudeme lpět. Nechtěla jsem jít do takového rizika, a tak jsme transfer odmítli.
 
 Teď se naplno věnujeme adopci a věříme, že tohle je ta naše správná cesta k miminku, kdy se ho s větší pravděpodobností dočkáme.
 
