@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'moje-pribehy' },   props: { label: 'Moje příběhy' } },
+    { params: { slug: 'telo-a-pece' },    props: { label: 'Tělo a péče' } },
+    { params: { slug: 'pribehy-jinych' }, props: { label: 'Příběhy jiných' } },
+    { params: { slug: 'ostatni' },        props: { label: 'Ostatní' } },
+  ];
+}
+
+const { slug } = Astro.params;
+const { label } = Astro.props;
+
+const all = await getCollection('clanky');
+const articles = all
+  .filter(a => a.data.kategorie === slug)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+<BaseLayout title={label}>
+  <div class="container prose">
+    <a href="/" class="back-link">← Zpět na přehled</a>
+    <h1 class="page-title">{label}</h1>
+    <ul class="article-list" role="list">
+      {articles.map(article => (
+        <ArticleCard
+          title={article.data.title}
+          slug={article.id}
+          date={article.data.date}
+          description={article.data.description}
+          pinned={false}
+        />
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

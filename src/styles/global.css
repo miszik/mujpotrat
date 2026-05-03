@@ -259,6 +259,70 @@ main { flex: 1; padding-block: 2.5rem; }
   margin-bottom: 0;
 }
 
+/* ─── Category grid ──────────────────────────────────────────── */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: var(--white);
+}
+
+.category-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.category-card__image {
+  height: 130px;
+  overflow: hidden;
+  background: var(--blue-light);
+}
+
+.category-card--telo-a-pece .category-card__image  { background: #e8f0e4; }
+.category-card--pribehy-jinych .category-card__image { background: #f0e8ea; }
+.category-card--ostatni .category-card__image       { background: #ede8e0; }
+
+.category-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-card__body {
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.category-card__label {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.category-card__count {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .category-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── Article list ───────────────────────────────────────────── */
 .article-list {
   list-style: none;

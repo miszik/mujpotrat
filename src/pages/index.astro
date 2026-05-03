@@ -56,6 +56,25 @@ const sections = [
       </section>
     )}
 
+    <nav class="category-grid" aria-label="Kategorie článků">
+      {sections.map(s => (
+        <a href={`/kategorie/${s.key}/`} class={`category-card category-card--${s.key}`}>
+          <div class="category-card__image">
+            <img
+              src={`/images/kategorie-${s.key}.jpg`}
+              alt={s.label}
+              onerror="this.style.display='none'"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-card__body">
+            <span class="category-card__label">{s.label}</span>
+            <span class="category-card__count">{s.articles.length} článků</span>
+          </div>
+        </a>
+      ))}
+    </nav>
+
     {sections.map(s => s.articles.length > 0 && (
       <section class="article-section">
         <h2 class="section-heading">{s.label}</h2>
