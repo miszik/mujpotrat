@@ -17,21 +17,18 @@ const articles = allArticles.sort((a, b) => {
   <TriggerWarning />
 
   <div class="container prose">
-    <div class="site-intro">
-      <p>
+    <div class="site-intro-hero">
+      <p class="site-intro-text">
         Blog Míši. O třech potratech, o tichu po nich, o hledání cesty dál.
         Psaný proto, aby se v tom žádná žena nemusela cítit sama.
       </p>
+      <img
+        src="/images/ja.jpg"
+        alt="Míša"
+        class="site-intro-photo"
+        loading="eager"
+      />
     </div>
-
-    <img
-      src="/images/ja.jpg"
-      alt="Míša"
-      class="hero-image"
-      width="900"
-      height="400"
-      loading="eager"
-    />
 
     <ul class="article-list" role="list">
       {articles.map(article => (
