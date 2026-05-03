@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: '2. díl Fratiškovi lázně - procedury'
 date: 2022-04-26
 description: 'Hlavní bod lázní - procedury ❤. Pojišťovnou jsem měla předepsané na každý den tři. Musím říct, že moje představa byla tak trochu filmová :D. Každodenní …'

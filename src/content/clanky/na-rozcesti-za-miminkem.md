@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Na rozcestí za miminkem'
 date: 2022-04-11
 description: 'Pomalu se blíží období, které jsme si stanovili jako nový začátek. Dny kdy se už počtvrté vydáme na tu bláznivou cestu za miminkem ❤. Vím, že někdo může…'

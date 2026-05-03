@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Chci být aspoň teta'
 date: 2022-02-13
 description: 'Toto téma pro mě bylo jedním z nejtěžších. Totiž to, že ostatní jsou těhotní nebo už i rodiči. Při jakémkoli pohledu nebo myšlence se ve mně mísila závi…'

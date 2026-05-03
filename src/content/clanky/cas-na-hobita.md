@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Čas na Hobita :)'
 date: 2021-12-05
 description: 'Před pár dny jsem mluvila s kamarádkou o tom, jak se mi daří po kyretáži. Byl to velmi milý rozhovor a mimo jiné jsme narazili i na téma “bezpečného odr…'

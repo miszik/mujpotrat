@@ -1,4 +1,5 @@
 ---
+kategorie: ostatni
 title: 'Geopatogenní zóny'
 date: 2021-12-12
 description: 'Předem bych chtěla upozornit, že toto téma není tak úplně pro každého. Je to totiž něco, co se nedá racionálně ověřit. Takže pokud jste k těmto tématům …'

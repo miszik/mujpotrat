@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Jsem blázen nebo jo Návštěva u psychoterapeuta'
 date: 2022-03-22
 description: 'V dnešní době se psychologická péče stává den ode dne běžnější. Všichni říkají, že je to přece normální. Je to jako jít k lékaři na prevenci. Radit druh…'

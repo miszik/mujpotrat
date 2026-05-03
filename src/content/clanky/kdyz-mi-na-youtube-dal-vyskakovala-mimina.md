@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Když mi na youtube dál vyskakovala mimina'
 date: 2021-11-25
 description: 'Ach ten chytrý internet... Jakmile jsem se poprvé dozvěděla že jsem těhotná, stáhla jsem si aplikaci, objednala knížku a začala na internetu studovat rů…'

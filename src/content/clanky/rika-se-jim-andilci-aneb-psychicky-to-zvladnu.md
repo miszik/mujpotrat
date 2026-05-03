@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Říká se jim andílci, aneb psychicky to zvládnu!'
 date: 2021-12-20
 description: 'Ráda bych s vámi posdílela krátkou myšlenku, která mi pomohla zvládat potratové ztráty. Po třetím potratu jsem byla zoufalá. Stalo se to potřetí! To už …'

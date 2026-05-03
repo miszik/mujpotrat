@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Žádost na lázně podána'
 date: 2022-01-19
 description: 'V pondělí jsem konečně podala na pojišťovně žádost na lázně. Oproti představě popsané v minulém článku jsem zažila pár věcí navíc, tak vám je tu jen krá…'

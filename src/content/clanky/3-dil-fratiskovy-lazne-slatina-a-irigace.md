@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: '3. díl Fratiškovy lázně - slatina a irigace'
 date: 2022-05-10
 description: 'Za mě dvě procedury, na kterých celý gynekologický program v lázních stojí. Vaginální irigace a slatinný zábal + slatinný poševní tampon. Samozřejmě fyz…'

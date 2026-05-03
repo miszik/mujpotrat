@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Ví o tom rodina, že píšeš blog'
 date: 2022-01-16
 description: 'Dnes trochu z jiného soudku, ale měla jsem potřebu to sem posdílet :). Možná vás tahle otázka taky napadla. Ví o tom, co děláš, rodina? Sice jsem to nep…'

@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Prostě čekáme na lepší :), aneb důležitá podpora partnera'
 date: 2021-11-28
 description: 'Potrat se bezesporu nedotýká jen ženy, ale celého páru. Nicméně často je to právě žena, která potřebuje utěšit. Nedokáže vnímat nic jiného a na chudáka …'

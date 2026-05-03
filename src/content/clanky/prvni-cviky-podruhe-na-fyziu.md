@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'První cviky - podruhé na fyziu'
 date: 2022-01-04
 description: 'Nechala jsem si týden, aby se vše odleželo :D a konečně se pouštím do článku z druhé návštěvy na fyzioterapii. Na té první jsem podstoupila celkovou dia…'

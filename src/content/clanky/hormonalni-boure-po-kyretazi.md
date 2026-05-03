@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Hormonální bouře po kyretáži'
 date: 2021-12-09
 description: 'Kyretáž, ostatně jako jakákoliv jiná operace, není pro tělo nic přirozeného. Zažila jsem si jí dvakrát. Slyšela jsem, že některé ženy se cítili po kyret…'

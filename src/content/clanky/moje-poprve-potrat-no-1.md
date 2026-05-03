@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Moje poprvé (potrat No.1)'
 date: 2021-11-17
 description: 'Pokud jste si přečetli stránku “O mně”, tak už tak trochu víte, jak to začalo, takže ve zkratce. Oba s manželem jsme byli zdraví a podle statistik rodič…'

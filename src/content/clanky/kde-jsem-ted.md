@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Kde jsem teď'
 date: 2026-05-03
 description: 'Tři potraty během jednoho roku, pak ticho. A pak se to povedlo. Dnes mám doma dva kluky. O tom, jak těhotenství po potratech vypadá a co zůstává.'

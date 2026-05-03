@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Co obnáší spermiogram'
 date: 2022-02-22
 description: 'Můj gynekolog říkal, že se mu spermiogram vzhledem ke snadnosti otěhotnění nezdá nutný. Následně jsem ale narazila na příběh, kde hrály spermie hlavní r…'

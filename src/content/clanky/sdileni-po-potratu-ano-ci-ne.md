@@ -1,4 +1,5 @@
 ---
+kategorie: ostatni
 title: 'Sdílení po potratu, ano či ne'
 date: 2021-12-30
 description: 'Co se týče sdílení, začala bych takovou obecnou “poučkou” z psychologie. Sdílejte! Každé sdílení z vás část smutku sejme. Jenže… jenže co se týče potrat…'

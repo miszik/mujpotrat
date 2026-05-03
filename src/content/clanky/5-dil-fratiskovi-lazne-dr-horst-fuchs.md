@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: '5. díl Fratiškovi lázně - Dr. Horst Fuchs'
 date: 2022-05-29
 description: 'A to “nejlepší” na konec… Jediná věc která mě v lázních opravdu naštvala.'

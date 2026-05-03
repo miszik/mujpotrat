@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Mobilizace kostrče'
 date: 2021-12-20
 description: 'To že jsem na fyzioterapii právě kvůli bolestem kostrče, jsem už psala v minulém článku. Když to zkrátím, tak mě kostrč začala bolet po dlouhém a hlavně…'

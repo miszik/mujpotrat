@@ -1,4 +1,5 @@
 ---
+kategorie: pribehy-jinych
 title: '1. díl Deník holky s PCOS Nikdy nebudete mít děti.'
 date: 2022-01-26
 description: 'Nedávno jsem oslovila Terku, zda by se se mnou nepodělila o svůj příběh. K mému nadšení souhlasila. Příběh je delší a tak jsem ho rozdělila do tří dílů.…'

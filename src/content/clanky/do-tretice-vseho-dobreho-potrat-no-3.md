@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Do třetice všeho dobrého ... (potrat No.3)'
 date: 2021-12-09
 description: 'Tento příběh jsem již v pár článcích nakousla, nicméně mám potřebu i pro něj vyhradit jeden článek. Bylo září a já se učila na odsunuté státnice. Očekáv…'

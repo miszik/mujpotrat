@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Jak probíhaly genetické testy'
 date: 2022-02-17
 description: 'Jak jsme se připravovali na genetické testy jsem popsala v tomto článku. Dnes bych ráda shrnula, jak to celé probíhalo od první návštěvy až po výsledky.'

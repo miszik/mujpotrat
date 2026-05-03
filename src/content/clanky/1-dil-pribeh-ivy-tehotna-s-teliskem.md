@@ -1,4 +1,5 @@
 ---
+kategorie: pribehy-jinych
 title: '1. díl Příběh Ivy Těhotná s tělískem'
 date: 2022-05-03
 description: 'Jsem moc ráda, že blog plní svůj účel a já mohu jeho prostřednictvím zveřejnit další příběh. Napsala mi Iva, že by sepsáním svých ztrát ráda uzavřela tu…'

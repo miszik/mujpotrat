@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Neplodnost'
 date: 2022-01-30
 description: 'Náš příběh začal krátce po svatbě, kdy jsme se rozhodli, že jsme oba připraveni mít spolu miminko. A naše cesta ještě není u konce.'

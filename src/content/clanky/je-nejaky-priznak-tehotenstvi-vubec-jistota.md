@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Je nějaký příznak těhotenství vůbec jistota'
 date: 2021-12-30
 description: 'Tenhle článek je trochu smutný :( ale bohužel je to realita. Proč o tom píšu? Protože já jsem vůbec nemohla uvěřit, že je to možné. A taky protože jsem …'

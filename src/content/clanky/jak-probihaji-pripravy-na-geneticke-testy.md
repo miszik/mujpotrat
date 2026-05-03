@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Jak probíhají přípravy na genetické testy'
 date: 2022-01-09
 description: 'Tento týden si budeme moci konečně odškrtnout další milník na naší cestě. Jdeme na genetické testy a já teda i na imunologii do GENNETU.'

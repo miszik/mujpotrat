@@ -6,12 +6,21 @@ import ArticleCard from '../components/ArticleCard.astro';
 
 const allArticles = await getCollection('clanky');
 
-// Pinned first, then by date descending
-const articles = allArticles.sort((a, b) => {
-  if (a.data.pinned && !b.data.pinned) return -1;
-  if (!a.data.pinned && b.data.pinned) return 1;
-  return b.data.date.getTime() - a.data.date.getTime();
-});
+const byDate = (a: any, b: any) => b.data.date.getTime() - a.data.date.getTime();
+
+const pinned = allArticles.filter(a => a.data.pinned).sort(byDate);
+
+const sections = [
+  { key: 'moje-pribehy',  label: 'Moje příběhy' },
+  { key: 'telo-a-pece',   label: 'Tělo a péče' },
+  { key: 'pribehy-jinych',label: 'Příběhy jiných' },
+  { key: 'ostatni',       label: 'Ostatní' },
+].map(s => ({
+  ...s,
+  articles: allArticles
+    .filter(a => !a.data.pinned && a.data.kategorie === s.key)
+    .sort(byDate),
+}));
 ---
 <BaseLayout title="Můj potrat">
   <TriggerWarning />
@@ -30,16 +39,38 @@ const articles = allArticles.sort((a, b) => {
       />
     </div>
 
-    <ul class="article-list" role="list">
-      {articles.map(article => (
-        <ArticleCard
-          title={article.data.title}
-          slug={article.id}
-          date={article.data.date}
-          description={article.data.description}
-          pinned={article.data.pinned}
-        />
-      ))}
-    </ul>
+    {pinned.length > 0 && (
+      <section class="article-section">
+        <h2 class="section-heading">Úvodní článek</h2>
+        <ul class="article-list" role="list">
+          {pinned.map(article => (
+            <ArticleCard
+              title={article.data.title}
+              slug={article.id}
+              date={article.data.date}
+              description={article.data.description}
+              pinned={article.data.pinned}
+            />
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {sections.map(s => s.articles.length > 0 && (
+      <section class="article-section">
+        <h2 class="section-heading">{s.label}</h2>
+        <ul class="article-list" role="list">
+          {s.articles.map(article => (
+            <ArticleCard
+              title={article.data.title}
+              slug={article.id}
+              date={article.data.date}
+              description={article.data.description}
+              pinned={false}
+            />
+          ))}
+        </ul>
+      </section>
+    ))}
   </div>
 </BaseLayout>

@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Proč tenhle blog'
 date: 2021-11-17
 description: 'Není to zvláštní psát blog, který už svým názvem může působit tak trochu depresivně? Možná že ano, ale nakonec jsem se k tomu přece jen rozhodla. Proč?'

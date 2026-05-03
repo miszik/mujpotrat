@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Když mi vzali těhotenskou průkazku (potrat No.2)'
 date: 2021-12-05
 description: 'Byl začátek roku a já se po spontánním potratu cítila skvěle. Pro jistotu jsem měla nakoupené ovulační testy, protože jsem se bála, že po potratu se moj…'

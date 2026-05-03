@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Mateřské pudy, okolo válka'
 date: 2022-03-30
 description: 'Začala válka. Strašné období, které bych nikomu nepřála. Přesto ve mně od začátku té tragédie problikávají sobecké pohnutky. Nebude nějaké dítě potřebov…'

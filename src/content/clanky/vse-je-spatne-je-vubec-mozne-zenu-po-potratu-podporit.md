@@ -1,4 +1,5 @@
 ---
+kategorie: ostatni
 title: 'Vše je špatně! Je vůbec možné ženu po potratu podpořit'
 date: 2022-01-25
 description: 'Byla jsem zkritizována za to, že kritizuji. Poukázala jsem totiž na rady, které byly dle mého nemístné a netaktní. Vím, že je těžké zavděčit se člověku,…'

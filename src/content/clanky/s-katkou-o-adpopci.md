@@ -1,4 +1,5 @@
 ---
+kategorie: pribehy-jinych
 title: 'S Katkou o adpopci'
 date: 2022-03-30
 description: 'Jsem moc ráda, že Katka souhlasila s rozhovorem. Je to velice aktivní žena, co se rozhodla kromě svých zájmů a povinností ještě sdílet svůj příběh. Píše…'

@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: '1. díl Fratiškovi lázně - dokola kolem'
 date: 2022-04-25
 description: 'Konečně jsem se dočkala a koncem března odjela do lázní. I když jsem se na ně šíleně těšila, musím přiznat, že v den odjezdu mi bylo celkem smutno. Před…'

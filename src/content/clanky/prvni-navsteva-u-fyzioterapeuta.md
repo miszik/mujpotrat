@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'První návštěva u fyzioterapeuta'
 date: 2021-12-17
 description: 'Začala bych tím, proč jsem tam vlastně šla. Ženy, které mají problém s početím, často navštěvují fyzioterapeuty kvůli metodě L. Mojžíšové. Já o ní neměl…'

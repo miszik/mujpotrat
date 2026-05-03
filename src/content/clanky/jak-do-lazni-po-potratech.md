@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Jak do lázní po potratech'
 date: 2022-01-06
 description: 'Nedávno jsem na instagramu zachytila informaci o možnosti lázní. Dost mě to zaujalo, mimo balzámu pro tělo by to byl jistě i balzám pro duši :). A to se…'

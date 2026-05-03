@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Co je to kyretáž a jak probíhá'
 date: 2021-12-09
 description: 'Na kyretáž jsem šla po druhém a třetím potratu, které byly zamlklé. Jde o krátkou operaci, provádějící se v celkové anestezii, trvající cca 10 minut. Bě…'

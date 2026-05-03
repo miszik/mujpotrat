@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Spontánní vs zamklý potrat'
 date: 2021-11-17
 description: 'Ráda bych se zde pokusila nastínit rozdíly mezi spontánním a zamlklým potratem. Oba dva jsem prožila, a tak se asi nevyhnu tomu, že popisy budou značně …'

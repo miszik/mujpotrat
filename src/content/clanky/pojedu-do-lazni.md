@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Pojedu do lázní'
 date: 2022-02-21
 description: 'Sláva nazdar výletu :D konečně se to blíží! ❤ Článek o tom, jak jsem shromažďovala dokumenty k lázním najdete [tady](https://mujpotrat.cz/zadost-na-lazn…'

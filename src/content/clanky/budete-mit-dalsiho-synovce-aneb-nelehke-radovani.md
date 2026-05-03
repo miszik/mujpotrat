@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: '„Budete mít dalšího synovce!" aneb nelehké radování'
 date: 2021-12-05
 description: 'Měla jsem necelý měsíc po třetím potratu. Byla jsem převážně doma a jen nerada jsem chodila ven. Jako naschvál byly všude těhotné a mimina, že…'

@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Zase ta kostrč... Potřetí na fyziiu'
 date: 2022-03-06
 description: 'Na třetí fyzio jsem měla jít už v půlce ledna, jenže… Jenže covid! Asi to teď všichni známe. Ze dne na den, ani nevím jak, bum horečky a pozitivní test.…'

@@ -1,4 +1,5 @@
 ---
+kategorie: telo-a-pece
 title: 'Jak je to s orgasmem po kyretáži'
 date: 2021-12-21
 description: 'Tak dnes z trošku jiného soudku ;). Setkala jsem se s různými názory na orgasmus po potratu. Jeden z nich byl i celkem negativní. “Jak někdo po potratu …'

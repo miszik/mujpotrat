@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Čekám. Na co Na život'
 date: 2022-02-09
 description: 'Od chvíle, kdy jsme se s manželem shodli, že jsme připraveni založit rodinu, se můj život proměnil. Postupně se všechny věci, aktivity, lidé… v mé hlavě…'

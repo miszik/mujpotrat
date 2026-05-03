@@ -1,4 +1,5 @@
 ---
+kategorie: moje-pribehy
 title: 'Pod horkou sprchou'
 date: 2021-12-22
 description: 'Říká se, že na všem špatném je něco dobrého. Co se týče ztráty miminka, tak opravdu nevím, kde bych to dobro měla hledat :( Nicméně jsem se rozhodla, že…'

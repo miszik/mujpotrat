@@ -1,4 +1,5 @@
 ---
+kategorie: ostatni
 title: 'Protipotratová iniciativa ... to nechceš!'
 date: 2021-12-30
 description: 'Upřímně vůbec nechápu, jak někdo může mít tu odvahu dát něco tak necitlivého na internet. Jen si na to vzpomenu a udělá se mi špatně, i když ranní nevol…'

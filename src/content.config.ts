@@ -8,6 +8,7 @@ const clanky = defineCollection({
     date: z.coerce.date(),
     description: z.string().optional(),
     pinned: z.boolean().optional().default(false),
+    kategorie: z.enum(['moje-pribehy', 'telo-a-pece', 'pribehy-jinych', 'ostatni']).optional(),
   }),
 });
 

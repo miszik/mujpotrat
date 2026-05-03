@@ -16,6 +16,16 @@ const formatted = date.toLocaleDateString('cs-CZ', {
 });
 ---
 <BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": date.toISOString(),
+    "author": { "@type": "Person", "name": "Míša" },
+    "publisher": { "@type": "Organization", "name": "Můj potrat" },
+    "inLanguage": "cs"
+  })} />
   <div class="container prose">
     <a href="/" class="back-link">Zpět na přehled</a>
     <article>
