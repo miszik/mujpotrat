@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: miszik/mujpotrat
+  branch: main
+  base_url: OAUTH_PROXY_URL
+  auth_endpoint: auth
+
+media_folder: public/images
+public_folder: /images
+
+locale: cs
+
+collections:
+  - name: clanky
+    label: Články
+    label_singular: Článek
+    folder: src/content/clanky
+    create: true
+    slug: "{{fields.slug}}"
+    fields:
+      - { label: Titulek, name: title, widget: string }
+      - label: URL název (bez háčků, slova oddělená pomlčkou)
+        name: slug
+        widget: string
+        hint: "Např: muj-novy-clanek"
+      - { label: Datum, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD. MM. YYYY", time_format: false }
+      - label: Kategorie
+        name: kategorie
+        widget: select
+        options:
+          - { label: Moje příběhy, value: moje-pribehy }
+          - { label: Tělo a péče, value: telo-a-pece }
+          - { label: Příběhy jiných, value: pribehy-jinych }
+          - { label: Ostatní, value: ostatni }
+      - { label: Krátký popis (zobrazí se v seznamu), name: description, widget: text, required: false }
+      - { label: Připnout nahoru, name: pinned, widget: boolean, default: false, required: false }
+      - { label: Text článku, name: body, widget: markdown }
