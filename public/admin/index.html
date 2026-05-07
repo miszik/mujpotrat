@@ -1,12 +1,427 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <title>Admin – Můj potrat</title>
+  <style>
+    :root {
+      --blue: #7BAFC4; --blue-light: #D6EAF2; --cream: #F2EDE4;
+      --bg: #FAFAF7; --text: #2C2C2C; --muted: #6A6A6A;
+      --border: #E5E0D8; --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── Layout ── */
+    .topbar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .topbar h1 { font-size: 1rem; font-weight: 600; color: var(--blue); }
+    .topbar-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .container { max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+    /* ── Cards / panels ── */
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; }
+    .card h2 { font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+    /* ── Forms ── */
+    .field { margin-bottom: 1.2rem; }
+    label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-bottom: 0.35rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    input[type=text], input[type=date], input[type=password], select, textarea {
+      width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--border); border-radius: 6px;
+      font-size: 0.95rem; font-family: inherit; background: var(--white); color: var(--text);
+      transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--blue); }
+    textarea { min-height: 380px; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.6; resize: vertical; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .checkbox-row { display: flex; align-items: center; gap: 0.5rem; }
+    .checkbox-row input { width: auto; }
+    .checkbox-row label { margin: 0; text-transform: none; font-size: 0.95rem; font-weight: 400; color: var(--text); }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1.1rem; border-radius: 6px; border: none; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: opacity 0.15s; text-decoration: none; }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-secondary { background: var(--cream); color: var(--text); }
+    .btn-danger { background: #e57373; color: white; }
+    .btn-sm { padding: 0.35rem 0.75rem; font-size: 0.82rem; }
+
+    /* ── Article list ── */
+    .article-row { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
+    .article-row:last-child { border-bottom: none; }
+    .article-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+    .article-title { font-weight: 500; font-size: 0.97rem; }
+    .badge { display: inline-block; font-size: 0.72rem; padding: 0.15rem 0.5rem; border-radius: 20px; background: var(--blue-light); color: var(--blue); font-weight: 600; }
+
+    /* ── Login ── */
+    .login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .login-card { width: 100%; max-width: 380px; }
+    .login-card h2 { text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; }
+
+    /* ── Alerts ── */
+    .alert { padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1rem; font-size: 0.9rem; }
+    .alert-error { background: #fdecea; color: #c62828; border: 1px solid #ef9a9a; }
+    .alert-success { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+
+    /* ── Spinner ── */
+    .spinner { display: inline-block; width: 18px; height: 18px; border: 2px solid rgba(0,0,0,0.15); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading { display: flex; align-items: center; gap: 0.75rem; color: var(--muted); padding: 2rem 0; }
+    .hint { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<div id="app"></div>
+<script>
+const REPO = 'miszik/mujpotrat';
+const BRANCH = 'main';
+const ARTICLES_PATH = 'src/content/clanky';
+
+// ── Storage ──────────────────────────────────────────────────────
+const store = {
+  getHash: () => localStorage.getItem('admin_hash'),
+  setHash: h => localStorage.setItem('admin_hash', h),
+  getToken: () => localStorage.getItem('ghpat'),
+  setToken: t => localStorage.setItem('ghpat', t),
+  isLoggedIn: () => sessionStorage.getItem('logged_in') === '1',
+  login: () => sessionStorage.setItem('logged_in', '1'),
+  logout: () => { sessionStorage.removeItem('logged_in'); render(); },
+};
+
+// ── SHA-256 ───────────────────────────────────────────────────────
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+// ── GitHub API ───────────────────────────────────────────────────
+async function ghRequest(method, path, body = null) {
+  const token = store.getToken();
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=${BRANCH}`, {
+    method,
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json',
+    },
+    body: body ? JSON.stringify(body) : null,
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub error ${res.status}`);
+  }
+  return res.json();
+}
+
+async function listArticles() {
+  return ghRequest('GET', ARTICLES_PATH);
+}
+
+async function getFile(path) {
+  return ghRequest('GET', path);
+}
+
+async function saveFile(path, content, sha, message) {
+  const encoded = btoa(unescape(encodeURIComponent(content)));
+  return ghRequest('PUT', path, { message, content: encoded, branch: BRANCH, ...(sha ? { sha } : {}) });
+}
+
+// ── Frontmatter ──────────────────────────────────────────────────
+function parseFrontmatter(raw) {
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!m) return { data: {}, body: raw };
+  const data = {};
+  m[1].split('\n').forEach(line => {
+    const ci = line.indexOf(':');
+    if (ci === -1) return;
+    const key = line.slice(0, ci).trim();
+    let val = line.slice(ci + 1).trim();
+    if ((val.startsWith("'") && val.endsWith("'")) || (val.startsWith('"') && val.endsWith('"')))
+      val = val.slice(1, -1).replace(/''/g, "'");
+    if (val === 'true') val = true;
+    else if (val === 'false') val = false;
+    data[key] = val;
+  });
+  return { data, body: m[2].trim() };
+}
+
+function buildFrontmatter(data, body) {
+  const lines = ['---'];
+  const order = ['kategorie', 'title', 'date', 'description', 'pinned'];
+  order.forEach(k => {
+    if (data[k] === undefined || data[k] === null || data[k] === '') return;
+    if (typeof data[k] === 'boolean') lines.push(`${k}: ${data[k]}`);
+    else lines.push(`${k}: '${String(data[k]).replace(/'/g, "''")}'`);
+  });
+  lines.push('---', '', body);
+  return lines.join('\n');
+}
+
+// ── Slug utils ───────────────────────────────────────────────────
+function slugify(str) {
+  return str.normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+// ── State ────────────────────────────────────────────────────────
+let view = 'loading'; // loading | setup | login | list | editor
+let articles = [];
+let currentFile = null; // { path, sha, data, body }
+let msg = null;
+
+// ── Render ───────────────────────────────────────────────────────
+function render() {
+  const app = document.getElementById('app');
+  if (!store.isLoggedIn()) {
+    if (!store.getHash()) { renderSetup(app); return; }
+    renderLogin(app); return;
+  }
+  if (currentFile !== null) { renderEditor(app); return; }
+  renderList(app);
+}
+
+// ── Setup (first visit) ─────────────────────────────────────────
+function renderSetup(app) {
+  app.innerHTML = `
+    <div class="login-wrap">
+      <div class="card login-card">
+        <h2>Nastavení hesla</h2>
+        <div id="setup-msg"></div>
+        <div class="field"><label>Heslo</label><input type="password" id="s-pw" placeholder="Zvol heslo"></div>
+        <div class="field"><label>Heslo znovu</label><input type="password" id="s-pw2" placeholder="Zopakuj heslo"></div>
+        <div class="field"><label>GitHub Personal Access Token</label>
+          <input type="password" id="s-token" placeholder="ghp_...">
+          <p class="hint">GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → New token → zaškrtni <strong>repo</strong></p>
+        </div>
+        <button class="btn btn-primary" style="width:100%" onclick="doSetup()">Nastavit a přihlásit</button>
+      </div>
+    </div>`;
+}
+
+async function doSetup() {
+  const pw = document.getElementById('s-pw').value;
+  const pw2 = document.getElementById('s-pw2').value;
+  const token = document.getElementById('s-token').value.trim();
+  const msgEl = document.getElementById('setup-msg');
+  if (!pw) { msgEl.innerHTML = err('Zadej heslo'); return; }
+  if (pw !== pw2) { msgEl.innerHTML = err('Hesla se neshodují'); return; }
+  if (!token) { msgEl.innerHTML = err('Zadej GitHub token'); return; }
+  store.setHash(await sha256(pw));
+  store.setToken(token);
+  store.login();
+  loadList();
+}
+
+// ── Login ────────────────────────────────────────────────────────
+function renderLogin(app) {
+  app.innerHTML = `
+    <div class="login-wrap">
+      <div class="card login-card">
+        <h2>Přihlásit se</h2>
+        <div id="login-msg"></div>
+        <div class="field"><label>Heslo</label><input type="password" id="l-pw" placeholder="Heslo" onkeydown="if(event.key==='Enter')doLogin()"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:0.5rem" onclick="doLogin()">Přihlásit</button>
+      </div>
+    </div>`;
+  setTimeout(() => document.getElementById('l-pw')?.focus(), 50);
+}
+
+async function doLogin() {
+  const pw = document.getElementById('l-pw').value;
+  const hash = await sha256(pw);
+  if (hash !== store.getHash()) {
+    document.getElementById('login-msg').innerHTML = err('Špatné heslo');
+    return;
+  }
+  store.login();
+  loadList();
+}
+
+// ── Article list ─────────────────────────────────────────────────
+async function loadList() {
+  view = 'list';
+  currentFile = null;
+  render();
+  try {
+    const files = await listArticles();
+    articles = files.filter(f => f.name.endsWith('.md')).sort((a, b) => a.name.localeCompare(b.name));
+  } catch(e) {
+    msg = { type: 'error', text: 'Chyba načítání: ' + e.message };
+  }
+  render();
+}
+
+function renderList(app) {
+  const msgHtml = msg ? `<div class="alert alert-${msg.type}">${msg.text}</div>` : '';
+  msg = null;
+  app.innerHTML = `
+    <div class="topbar">
+      <h1>Můj potrat — Admin</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-primary btn-sm" onclick="newArticle()">+ Nový článek</button>
+        <button class="btn btn-secondary btn-sm" onclick="store.logout()">Odhlásit</button>
+      </div>
+    </div>
+    <div class="container">
+      ${msgHtml}
+      <div class="card">
+        <h2>Články</h2>
+        ${articles.length === 0
+          ? '<div class="loading"><span class="spinner"></span> Načítám…</div>'
+          : articles.map(f => articleRow(f)).join('')}
+      </div>
+    </div>`;
+}
+
+const KATEGORIE = {
+  'moje-pribehy': 'Moje příběhy',
+  'telo-a-pece': 'Tělo a péče',
+  'pribehy-jinych': 'Příběhy jiných',
+  'ostatni': 'Ostatní',
+};
+
+function articleRow(f) {
+  const name = f.name.replace('.md', '');
+  return `
+    <div class="article-row">
+      <div>
+        <div class="article-title">${name}</div>
+      </div>
+      <button class="btn btn-secondary btn-sm" onclick="editArticle('${f.path}')">Upravit</button>
+    </div>`;
+}
+
+// ── Editor ───────────────────────────────────────────────────────
+async function newArticle() {
+  currentFile = { path: null, sha: null, data: { date: new Date().toISOString().slice(0,10), pinned: false, kategorie: 'moje-pribehy' }, body: '' };
+  render();
+}
+
+async function editArticle(path) {
+  view = 'editor';
+  currentFile = { path, sha: null, data: {}, body: '' };
+  render();
+  try {
+    const file = await getFile(path);
+    const raw = decodeURIComponent(escape(atob(file.content.replace(/\n/g,''))));
+    const { data, body } = parseFrontmatter(raw);
+    currentFile = { path, sha: file.sha, data, body };
+    render();
+  } catch(e) {
+    msg = { type: 'error', text: 'Chyba: ' + e.message };
+    currentFile = null;
+    render();
+  }
+}
+
+function renderEditor(app) {
+  const d = currentFile.data;
+  const isNew = !currentFile.path;
+  app.innerHTML = `
+    <div class="topbar">
+      <h1>${isNew ? 'Nový článek' : 'Upravit článek'}</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-secondary btn-sm" onclick="loadList()">← Zpět</button>
+        <button class="btn btn-primary btn-sm" onclick="doSave()">Uložit a publikovat</button>
+      </div>
+    </div>
+    <div class="container">
+      <div id="editor-msg"></div>
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="field-row">
+          <div class="field">
+            <label>Titulek *</label>
+            <input type="text" id="f-title" value="${esc(d.title||'')}" oninput="autoSlug()">
+          </div>
+          <div class="field">
+            <label>Datum *</label>
+            <input type="date" id="f-date" value="${d.date||''}">
+          </div>
+        </div>
+        ${isNew ? `<div class="field">
+          <label>URL název (slug)</label>
+          <input type="text" id="f-slug" value="" placeholder="automaticky z titulku">
+          <p class="hint">Pouze písmena bez háčků, čísla a pomlčky. Např: muj-novy-clanek</p>
+        </div>` : `<div class="field"><label>Soubor</label><input type="text" disabled value="${currentFile.path}"></div>`}
+        <div class="field-row">
+          <div class="field">
+            <label>Kategorie</label>
+            <select id="f-kat">
+              ${Object.entries(KATEGORIE).map(([v,l]) => `<option value="${v}" ${d.kategorie===v?'selected':''}>${l}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field" style="display:flex;align-items:flex-end;padding-bottom:0.1rem">
+            <div class="checkbox-row">
+              <input type="checkbox" id="f-pinned" ${d.pinned?'checked':''}>
+              <label for="f-pinned">Připnout jako první</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Krátký popis (zobrazí se v seznamu)</label>
+          <input type="text" id="f-desc" value="${esc(d.description||'')}">
+        </div>
+      </div>
+      <div class="card">
+        <div class="field">
+          <label>Text článku (Markdown)</label>
+          <textarea id="f-body">${esc(currentFile.body||'')}</textarea>
+        </div>
+      </div>
+    </div>`;
+}
+
+function autoSlug() {
+  const slugEl = document.getElementById('f-slug');
+  if (!slugEl) return;
+  const title = document.getElementById('f-title').value;
+  slugEl.value = slugify(title);
+}
+
+async function doSave() {
+  const msgEl = document.getElementById('editor-msg');
+  const title = document.getElementById('f-title').value.trim();
+  const date = document.getElementById('f-date').value;
+  const desc = document.getElementById('f-desc').value.trim();
+  const kat = document.getElementById('f-kat').value;
+  const pinned = document.getElementById('f-pinned').checked;
+  const body = document.getElementById('f-body').value;
+
+  if (!title) { msgEl.innerHTML = err('Titulek je povinný'); return; }
+  if (!date) { msgEl.innerHTML = err('Datum je povinné'); return; }
+
+  let path = currentFile.path;
+  if (!path) {
+    let slug = document.getElementById('f-slug').value.trim();
+    if (!slug) slug = slugify(title);
+    if (!slug) { msgEl.innerHTML = err('Nepodařilo se vygenerovat název souboru'); return; }
+    path = `${ARTICLES_PATH}/${slug}.md`;
+  }
+
+  const data = { kategorie: kat, title, date, ...(desc ? { description: desc } : {}), pinned };
+  const content = buildFrontmatter(data, body);
+
+  msgEl.innerHTML = '<div class="loading"><span class="spinner"></span> Ukládám…</div>';
+
+  try {
+    const commitMsg = currentFile.sha ? `Upravit: ${title}` : `Přidat: ${title}`;
+    await saveFile(path, content, currentFile.sha, commitMsg);
+    currentFile = null;
+    msg = { type: 'success', text: `Uloženo. Web se za ~2 minuty aktualizuje.` };
+    loadList();
+  } catch(e) {
+    msgEl.innerHTML = err('Chyba ukládání: ' + e.message);
+  }
+}
+
+// ── Helpers ──────────────────────────────────────────────────────
+function err(t) { return `<div class="alert alert-error">${t}</div>`; }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+// ── Boot ─────────────────────────────────────────────────────────
+render();
+if (store.isLoggedIn()) loadList();
+</script>
 </body>
 </html>
